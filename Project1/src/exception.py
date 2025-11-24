@@ -1,7 +1,7 @@
 # whenever an exception gets raised throw this custom error message
 import sys
-import logging 
-
+# .logger - relative import , src.logger - asolute import
+from .logger import logging
 def error_message_detail(error, error_detail:sys):
     # variable exe_tb - extracted from built-in exc_info() ---> gives us the details like on which file the exception has 
     # occured, on which line number etc will be stored in exe_tb
@@ -31,9 +31,9 @@ class CustomeException(Exception):
     
 
 # to run any py file
-if __name__ == "__main__":
-    try:
-        a= 1/0
-    except Exception as e:
-        logging.info("Divide by 0 error")
-        raise CustomeException(e, sys)
+# if __name__ == "__main__":
+#     try:
+#         a= 1/0
+#     except Exception as e:
+#         logging.info("Divide by 0 error")
+#         raise CustomeException(e, sys)
