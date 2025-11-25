@@ -1,6 +1,11 @@
 pandas
 numpy
 seaborn
+scikit-learn
+catboost
+xgboost
 
 #  -e. will automatically trigger the setup.py file 
--e.
+# comment till building the project , else everytime we insatll the requirement the project triggers a build.
+# build the application as. a package at the end
+# -e.
