@@ -6,6 +6,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
+from src.components.data_transformation import DataTransformation
+
 # any input that i require from any data scource will be give to this class
 # @dataclass decorator to create & save variables
 @dataclass
@@ -57,5 +59,7 @@ class DataInjestion:
 
 if __name__ == "__main__":
     obj = DataInjestion()
-    obj.initiate_data_ingestion()
+    train_data, test_data = obj.initiate_data_ingestion()
+    data_transformation = DataTransformation()
+    data_transformation.initiate_data_transformation_process(train_data, test_data)
 
