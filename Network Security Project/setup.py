@@ -1,0 +1,1 @@
+# holds generic information about the entire project like versions, authors etc
